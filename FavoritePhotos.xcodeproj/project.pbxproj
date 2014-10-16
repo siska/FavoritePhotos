@@ -83,9 +83,9 @@
 			children = (
 				1210AF9519F05F4900BBAC4B /* AppDelegate.h */,
 				1210AF9619F05F4900BBAC4B /* AppDelegate.m */,
+				1210AF9B19F05F4900BBAC4B /* Main.storyboard */,
 				1210AF9819F05F4900BBAC4B /* ViewController.h */,
 				1210AF9919F05F4900BBAC4B /* ViewController.m */,
-				1210AF9B19F05F4900BBAC4B /* Main.storyboard */,
 				1210AF9E19F05F4900BBAC4B /* Images.xcassets */,
 				1210AFA019F05F4900BBAC4B /* LaunchScreen.xib */,
 				1210AF9119F05F4900BBAC4B /* Supporting Files */,
