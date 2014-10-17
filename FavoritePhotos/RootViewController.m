@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.photos = [[NSMutableArray alloc] init];
     [self getPhotos:@"chicago"];
 }
 
@@ -51,7 +52,7 @@
                 NSDictionary *tempLowResDictionary = [tempImagesDictionary objectForKey:@"low_resolution"];
                 NSString *tempURLString = [tempLowResDictionary objectForKey:@"url"];
                 PhotoInfo *photo = [[PhotoInfo alloc] initWithImage:tempURLString]; //learned this - taylors meetup
-                NSLog(@"PhotoInfo photo %@", photo);
+                //NSLog(@"PhotoInfo photo %@", photo);
                 [self.photos addObject:photo];
 
                 //[self createPhotoClass:tempURLString];
