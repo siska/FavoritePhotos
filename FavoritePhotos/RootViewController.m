@@ -67,6 +67,12 @@
     return 0;
 }
 
-
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *searchTerm = searchBar.text;
+    [self getPhotos:searchTerm];
+    searchBar.text = @"";
+    [searchBar resignFirstResponder];
+}
 
 @end
