@@ -16,16 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search public photos" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7Y-8K-NER">
-                                <rect key="frame" x="16" y="72" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="O3y-cj-smT"/>
-                                </connections>
-                            </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SSW-aT-5Mv">
-                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5cC-mI-Jzf">
                                     <size key="itemSize" width="599.5" height="400"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,24 +40,25 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="YHD-m3-iOq"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="boo-uv-cFe">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96248796519497293" blue="0.7841807556920577" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="r7Y-8K-NER" secondAttribute="centerX" id="95n-Vj-oFi"/>
-                            <constraint firstAttribute="centerX" secondItem="SSW-aT-5Mv" secondAttribute="centerX" id="H4D-ce-jKb"/>
-                            <constraint firstItem="r7Y-8K-NER" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="J0t-bb-LlC"/>
-                            <constraint firstAttribute="trailing" secondItem="r7Y-8K-NER" secondAttribute="trailing" constant="16" id="JLp-wd-U3u"/>
-                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="top" secondItem="r7Y-8K-NER" secondAttribute="bottom" constant="8" id="K3i-q8-4AY"/>
-                            <constraint firstItem="r7Y-8K-NER" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="YV1-l8-ZYa"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SSW-aT-5Mv" secondAttribute="bottom" id="fce-UZ-GZR"/>
-                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="qsd-Vp-5SH"/>
-                            <constraint firstAttribute="trailing" secondItem="SSW-aT-5Mv" secondAttribute="trailing" id="ypB-0i-lFa"/>
+                            <constraint firstAttribute="centerX" secondItem="SSW-aT-5Mv" secondAttribute="centerX" id="9At-St-bE9"/>
+                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="top" secondItem="boo-uv-cFe" secondAttribute="bottom" id="9kJ-VL-bbe"/>
+                            <constraint firstAttribute="trailing" secondItem="boo-uv-cFe" secondAttribute="trailing" id="Kiv-sN-umq"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SSW-aT-5Mv" secondAttribute="bottom" id="OU6-VE-fdC"/>
+                            <constraint firstAttribute="trailing" secondItem="SSW-aT-5Mv" secondAttribute="trailing" id="aXY-gV-UK4"/>
+                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bUg-Z9-0lw"/>
+                            <constraint firstItem="boo-uv-cFe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="qWq-dw-68G"/>
+                            <constraint firstItem="boo-uv-cFe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sUR-rp-p6L"/>
+                            <constraint firstAttribute="centerX" secondItem="boo-uv-cFe" secondAttribute="centerX" id="yv8-el-qWo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos &amp; Stuff" id="4LJ-CG-mOs"/>
-                    <connections>
-                        <outlet property="textField" destination="r7Y-8K-NER" id="vQh-gb-uX9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
