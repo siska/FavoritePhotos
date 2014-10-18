@@ -26,6 +26,7 @@
 
 - (void)getPhotos:(NSString *)urlString
 {
+    NSLog(@"getting URL sent from search: %@", urlString);
     [super viewDidLoad];
     NSString *string = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=de07f6709b3a418683cb2f43a2729de2&callback=callbackFunction=json", urlString];
     NSURL *url = [NSURL URLWithString:string];
@@ -48,7 +49,7 @@
                 [self.photos addObject:photo];
             }
                  NSLog(@"self.photos %@", self.photos);
-//                 [self.tableView reloadData];
+                 [self.imageCollectionView reloadData];
         }
         NSLog(@"Connection Error: %@", connectionError);
         NSLog(@"JSON Error: %@", jsonError);
@@ -59,19 +60,19 @@
 
 -(ImageCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"reached the cellForItem...");
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
     NSInteger indexOfCurrentCollectionCell = [indexPath item];
     PhotoInfo *photoForCell = [[self photos] objectAtIndex:indexOfCurrentCollectionCell];
 
     cell.imageView.image = photoForCell.image;
     //photoForCell.delegate = self;
-    NSLog(@"Finished the cellForItem...");
     return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return self.photos.count;
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
