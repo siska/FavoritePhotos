@@ -81,6 +81,7 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     NSString *searchTerm = searchBar.text;
+    [self.photos removeAllObjects];
     [self getPhotos:searchTerm];
     searchBar.text = @"";
     [searchBar resignFirstResponder];
