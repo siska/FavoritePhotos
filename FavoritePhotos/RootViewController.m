@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photos = [[NSMutableArray alloc] init];
-    [self getPhotos:@"chicago"];
+    [self getPhotos:@"Chicago"];
 }
 
 - (void)getPhotos:(NSString *)urlString
@@ -87,7 +87,7 @@
     NSString *searchTerm = searchBar.text;
     [self.photos removeAllObjects];
     [self getPhotos:searchTerm];
-//    [self.imageCollectionView setContentOffset:CGPointZero animated:NO];
+
     searchBar.text = @"";
     [searchBar resignFirstResponder];
 }
