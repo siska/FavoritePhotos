@@ -13,3 +13,6 @@
 @property BOOL *favorited;
 
 @end
+
+
+//deprecated

@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "PhotoInfo.h"
+#import "ImageCollectionViewCell.h"
 
 @interface RootViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 @property NSMutableArray *photos;
@@ -57,8 +59,12 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
+    NSInteger indexOfCurrentCollectionCell = [indexPath item];
+    PhotoInfo *photoForCell = [[self photos] objectAtIndex:indexOfCurrentCollectionCell];
 
+    cell.imageView.image = photoForCell.image;
+    //photoForCell.delegate = self;
     return cell;
 }
 

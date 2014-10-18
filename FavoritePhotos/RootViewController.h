@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PhotoInfo.h"
 
 @interface RootViewController : UIViewController
 

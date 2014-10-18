@@ -11,3 +11,6 @@
 @implementation PhotoImage
 
 @end
+
+
+//deprecated
