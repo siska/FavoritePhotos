@@ -39,12 +39,9 @@
                 NSDictionary *tempImagesDictionary = [tempDictionary objectForKey:@"images"];
                 NSDictionary *tempLowResDictionary = [tempImagesDictionary objectForKey:@"low_resolution"];
                 NSString *tempURLString = [tempLowResDictionary objectForKey:@"url"];
-                PhotoInfo *photo = [[PhotoInfo alloc] initWithImage:tempURLString]; //learned this - taylors meetup
+                PhotoInfo *photo = [[PhotoInfo alloc] initWithImage:tempURLString]; //learned this - taylors meetup project implementation
                 //NSLog(@"PhotoInfo photo %@", photo);
                 [self.photos addObject:photo];
-
-                //[self createPhotoClass:tempURLString];
-                //NSLog(@"%@", tempURLDictionary);
             }
                  NSLog(@"self.photos %@", self.photos);
 //                 [self.tableView reloadData];
@@ -59,6 +56,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
+    
     return cell;
 }
 
