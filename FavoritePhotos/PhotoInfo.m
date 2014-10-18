@@ -12,16 +12,17 @@
 
 - (instancetype) initWithImage:(NSString *)url;
 {
-    NSURL *urlString = [NSURL URLWithString:url];
-    NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation([UIImage imageWithData:[NSData dataWithContentsOfURL:urlString]])];
-    UIImage *image = [UIImage imageWithData:imageData];
+    self = [super init];
+    if (self)
+    {
+        NSURL *urlString = [NSURL URLWithString:url];
+        NSData *imageData = [NSData dataWithContentsOfURL:urlString];
+        UIImage *image = [UIImage imageWithData:imageData];
 
-    PhotoInfo *photo = [[PhotoInfo alloc] init];
-    photo.image = image;
-    photo.favorited = NO; //will have to change later - will reset an image if it reappears in the first ten
-
-    return photo;
+        self.image = image;
+        self.favorited = NO; //will have to change later - will reset an image if it reappears in the first ten
+    }
+    return self;
 }
-
 
 @end

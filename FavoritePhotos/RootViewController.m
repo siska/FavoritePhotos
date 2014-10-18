@@ -57,7 +57,7 @@
 
 #pragma mark - CollectionView Delegates
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+-(ImageCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
     NSInteger indexOfCurrentCollectionCell = [indexPath item];
@@ -65,6 +65,7 @@
 
     cell.imageView.image = photoForCell.image;
     //photoForCell.delegate = self;
+    NSLog(@"Finished the cellForItem...");
     return cell;
 }
 
