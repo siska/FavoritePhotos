@@ -8,8 +8,9 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController () <UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
+@interface RootViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 @property NSMutableArray *photos;
+
 @end
 
 @implementation RootViewController
