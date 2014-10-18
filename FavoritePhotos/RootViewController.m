@@ -28,6 +28,9 @@
 {
     NSLog(@"getting URL sent from search: %@", urlString);
     [super viewDidLoad];
+
+    self.navigationItem.title = urlString;
+
     NSString *string = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=de07f6709b3a418683cb2f43a2729de2&callback=callbackFunction=json", urlString];
     NSURL *url = [NSURL URLWithString:string];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -53,7 +56,7 @@
             }
             NSLog(@"self.photos %@", self.photos);
             [self.imageCollectionView reloadData];
-            [self.imageCollectionView setContentOffset:CGPointZero animated:NO];
+            [self.imageCollectionView setContentOffset:CGPointZero animated:YES];
         }
         NSLog(@"Connection Error: %@", connectionError);
         NSLog(@"JSON Error: %@", jsonError);
