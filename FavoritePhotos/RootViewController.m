@@ -24,6 +24,11 @@
     [self getPhotos:@"Chicago"];
 }
 
+- (IBAction)onImageTapped:(id)sender {
+    
+}
+
+
 - (void)getPhotos:(NSString *)urlString
 {
     NSLog(@"getting URL sent from search: %@", urlString);
@@ -81,6 +86,8 @@
 {
     return self.photos.count;
 }
+
+#pragma mark - SearchBar Delegates
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
