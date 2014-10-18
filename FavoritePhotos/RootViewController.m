@@ -10,6 +10,7 @@
 
 @interface RootViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 @property NSMutableArray *photos;
+@property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
 
 @end
 
@@ -57,7 +58,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
-    
+
     return cell;
 }
 

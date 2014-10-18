@@ -16,6 +16,7 @@
 		1210AFAE19F05F4A00BBAC4B /* FavoritePhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AFAD19F05F4A00BBAC4B /* FavoritePhotosTests.m */; };
 		1210AFB919F08C0000BBAC4B /* PhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AFB819F08C0000BBAC4B /* PhotoInfo.m */; };
 		1210AFBC19F08C6700BBAC4B /* PhotoImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1210AFBB19F08C6700BBAC4B /* PhotoImage.m */; };
+		128B73A219F1F7C30000060F /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 128B73A119F1F7C30000060F /* ImageCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		1210AFB819F08C0000BBAC4B /* PhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoInfo.m; sourceTree = "<group>"; };
 		1210AFBA19F08C6700BBAC4B /* PhotoImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoImage.h; sourceTree = "<group>"; };
 		1210AFBB19F08C6700BBAC4B /* PhotoImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoImage.m; sourceTree = "<group>"; };
+		128B73A019F1F7C30000060F /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		128B73A119F1F7C30000060F /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				1210AF9B19F05F4900BBAC4B /* Main.storyboard */,
 				1210AF9819F05F4900BBAC4B /* RootViewController.h */,
 				1210AF9919F05F4900BBAC4B /* RootViewController.m */,
+				128B73A019F1F7C30000060F /* ImageCollectionViewCell.h */,
+				128B73A119F1F7C30000060F /* ImageCollectionViewCell.m */,
 				1210AFB719F08C0000BBAC4B /* PhotoInfo.h */,
 				1210AFB819F08C0000BBAC4B /* PhotoInfo.m */,
 				1210AF9E19F05F4900BBAC4B /* Images.xcassets */,
@@ -233,6 +238,7 @@
 				1210AF9A19F05F4900BBAC4B /* RootViewController.m in Sources */,
 				1210AFBC19F08C6700BBAC4B /* PhotoImage.m in Sources */,
 				1210AF9719F05F4900BBAC4B /* AppDelegate.m in Sources */,
+				128B73A219F1F7C30000060F /* ImageCollectionViewCell.m in Sources */,
 				1210AF9419F05F4900BBAC4B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +430,7 @@
 				1210AFB319F05F4A00BBAC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1210AFB419F05F4A00BBAC4B /* Build configuration list for PBXNativeTarget "FavoritePhotosTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +439,7 @@
 				1210AFB619F05F4A00BBAC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

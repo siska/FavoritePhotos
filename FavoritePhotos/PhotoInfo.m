@@ -18,7 +18,7 @@
 
     PhotoInfo *photo = [[PhotoInfo alloc] init];
     photo.image = image;
-    photo.favorited = NO;
+    photo.favorited = NO; //will have to change later - will reset an image if it reappears in the first ten
 
     return photo;
 }
