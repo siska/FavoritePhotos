@@ -41,15 +41,18 @@
 
             for (NSDictionary *tempDictionary in tempDataArray) //to be able to pull objectForKeys from Dictionary
             {
-                NSDictionary *tempImagesDictionary = [tempDictionary objectForKey:@"images"];
-                NSDictionary *tempLowResDictionary = [tempImagesDictionary objectForKey:@"low_resolution"];
-                NSString *tempURLString = [tempLowResDictionary objectForKey:@"url"];
-                PhotoInfo *photo = [[PhotoInfo alloc] initWithImage:tempURLString]; //learned this - taylors meetup project implementation
-                //NSLog(@"PhotoInfo photo %@", photo);
-                [self.photos addObject:photo];
+                if (self.photos.count < 10)
+                {
+                    NSDictionary *tempImagesDictionary = [tempDictionary objectForKey:@"images"];
+                    NSDictionary *tempLowResDictionary = [tempImagesDictionary objectForKey:@"low_resolution"];
+                    NSString *tempURLString = [tempLowResDictionary objectForKey:@"url"];
+
+                    PhotoInfo *photo = [[PhotoInfo alloc] initWithImage:tempURLString]; //learned this - taylors meetup project implementation
+                    [self.photos addObject:photo];
+                }
             }
-                 NSLog(@"self.photos %@", self.photos);
-                 [self.imageCollectionView reloadData];
+            NSLog(@"self.photos %@", self.photos);
+            [self.imageCollectionView reloadData];
         }
         NSLog(@"Connection Error: %@", connectionError);
         NSLog(@"JSON Error: %@", jsonError);
