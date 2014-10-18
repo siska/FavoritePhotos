@@ -31,8 +31,16 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="599.5" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-PU-PTS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="599.5" height="400"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="imageView" destination="J7X-PU-PTS" id="Ejo-C9-6Xr"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

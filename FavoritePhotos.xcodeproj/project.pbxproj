@@ -90,8 +90,6 @@
 		1210AF9019F05F4900BBAC4B /* FavoritePhotos */ = {
 			isa = PBXGroup;
 			children = (
-				1210AF9519F05F4900BBAC4B /* AppDelegate.h */,
-				1210AF9619F05F4900BBAC4B /* AppDelegate.m */,
 				1210AF9B19F05F4900BBAC4B /* Main.storyboard */,
 				1210AF9819F05F4900BBAC4B /* RootViewController.h */,
 				1210AF9919F05F4900BBAC4B /* RootViewController.m */,
@@ -100,6 +98,8 @@
 				1210AFB719F08C0000BBAC4B /* PhotoInfo.h */,
 				1210AFB819F08C0000BBAC4B /* PhotoInfo.m */,
 				1210AF9E19F05F4900BBAC4B /* Images.xcassets */,
+				1210AF9519F05F4900BBAC4B /* AppDelegate.h */,
+				1210AF9619F05F4900BBAC4B /* AppDelegate.m */,
 				1210AFA019F05F4900BBAC4B /* LaunchScreen.xib */,
 				1210AFBA19F08C6700BBAC4B /* PhotoImage.h */,
 				1210AFBB19F08C6700BBAC4B /* PhotoImage.m */,
