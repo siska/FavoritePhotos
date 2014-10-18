@@ -53,6 +53,7 @@
             }
             NSLog(@"self.photos %@", self.photos);
             [self.imageCollectionView reloadData];
+            [self.imageCollectionView setContentOffset:CGPointZero animated:NO];
         }
         NSLog(@"Connection Error: %@", connectionError);
         NSLog(@"JSON Error: %@", jsonError);
@@ -83,6 +84,7 @@
     NSString *searchTerm = searchBar.text;
     [self.photos removeAllObjects];
     [self getPhotos:searchTerm];
+//    [self.imageCollectionView setContentOffset:CGPointZero animated:NO];
     searchBar.text = @"";
     [searchBar resignFirstResponder];
 }
