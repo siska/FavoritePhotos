@@ -60,7 +60,7 @@
 
 -(ImageCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"reached the cellForItem...");
+    //NSLog(@"reached the cellForItem...");
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
     NSInteger indexOfCurrentCollectionCell = [indexPath item];
     PhotoInfo *photoForCell = [[self photos] objectAtIndex:indexOfCurrentCollectionCell];
