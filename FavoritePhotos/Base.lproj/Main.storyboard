@@ -16,10 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="boo-uv-cFe">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="tda-1B-fuy"/>
+                                </connections>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SSW-aT-5Mv">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" red="1" green="0.96248796520000002" blue="0.78418075570000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5cC-mI-Jzf">
-                                    <size key="itemSize" width="599.5" height="400"/>
+                                    <size key="itemSize" width="521" height="415"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -29,11 +37,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="599.5" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="521" height="415"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7X-PU-PTS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="599.5" height="400"/>
+                                                    <rect key="frame" x="94" y="44" width="332.5" height="327"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -48,25 +56,17 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="YHD-m3-iOq"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="boo-uv-cFe">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="tda-1B-fuy"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96248796519497293" blue="0.7841807556920577" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="SSW-aT-5Mv" secondAttribute="centerX" id="9At-St-bE9"/>
-                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="top" secondItem="boo-uv-cFe" secondAttribute="bottom" id="9kJ-VL-bbe"/>
-                            <constraint firstAttribute="trailing" secondItem="boo-uv-cFe" secondAttribute="trailing" id="Kiv-sN-umq"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SSW-aT-5Mv" secondAttribute="bottom" id="OU6-VE-fdC"/>
-                            <constraint firstAttribute="trailing" secondItem="SSW-aT-5Mv" secondAttribute="trailing" id="aXY-gV-UK4"/>
-                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bUg-Z9-0lw"/>
-                            <constraint firstItem="boo-uv-cFe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="qWq-dw-68G"/>
-                            <constraint firstItem="boo-uv-cFe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sUR-rp-p6L"/>
-                            <constraint firstAttribute="centerX" secondItem="boo-uv-cFe" secondAttribute="centerX" id="yv8-el-qWo"/>
+                            <constraint firstAttribute="trailing" secondItem="boo-uv-cFe" secondAttribute="trailing" id="ABN-Gx-Vtw"/>
+                            <constraint firstItem="boo-uv-cFe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="AkM-bu-35Q"/>
+                            <constraint firstAttribute="trailing" secondItem="SSW-aT-5Mv" secondAttribute="trailing" id="GtV-2P-87W"/>
+                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Jcc-A9-PNb"/>
+                            <constraint firstItem="SSW-aT-5Mv" firstAttribute="top" secondItem="boo-uv-cFe" secondAttribute="bottom" id="NaN-cD-jJd"/>
+                            <constraint firstItem="boo-uv-cFe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="PZS-3y-sxO"/>
+                            <constraint firstAttribute="centerX" secondItem="boo-uv-cFe" secondAttribute="centerX" id="ZhE-DJ-Vkc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SSW-aT-5Mv" secondAttribute="bottom" id="tlW-Bu-TkR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos &amp; Stuff" id="4LJ-CG-mOs"/>
@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="-396"/>
+            <point key="canvasLocation" x="1209" y="-396"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hKf-Hj-e3D">
