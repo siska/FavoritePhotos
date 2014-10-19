@@ -7,6 +7,8 @@
 //
 
 #import "FavoritesCollectionViewController.h"
+#import "FavoritesCollectionViewCell.h"
+
 
 @interface FavoritesCollectionViewController ()
 
@@ -23,7 +25,7 @@ static NSString * const reuseIdentifier = @"SecondCellID";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -35,10 +37,11 @@ static NSString * const reuseIdentifier = @"SecondCellID";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SecondCellID" forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+    FavoritesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SecondCellID" forIndexPath:indexPath];
+    NSInteger indexOfCurrentCollectionCell = [indexPath item];
+    PhotoInfo *photoForCell = [[self favoritedArray] objectAtIndex:indexOfCurrentCollectionCell];
+
+    cell.favoritesImageView.image = photoForCell.image;
     return cell;
 }
 

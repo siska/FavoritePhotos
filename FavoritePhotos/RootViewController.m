@@ -72,6 +72,7 @@
 {
     FavoritesCollectionViewController *favoritesViewController = [segue destinationViewController];
     favoritesViewController.favoritedArray = self.favoritedPhotos;
+    NSLog(@"In Prepare for Segue: %@", favoritesViewController.favoritedArray);
 }
 
 #pragma mark - CollectionView Delegates
@@ -95,6 +96,7 @@
 {
     PhotoInfo *selectedPhoto = [self.photos objectAtIndex:indexPath.row];
     [self.favoritedPhotos addObject:selectedPhoto];
+    NSLog(@"User clicked a photo: %@", self.favoritedPhotos);
 }
 
 #pragma mark - SearchBar Delegates

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoInfo.h"
 
 @interface FavoritesCollectionViewController : UICollectionViewController
 @property NSMutableArray *favoritedArray;

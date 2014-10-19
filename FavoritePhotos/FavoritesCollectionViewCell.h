@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoritesCollectionViewCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *favoritesImageView;
 
 @end
