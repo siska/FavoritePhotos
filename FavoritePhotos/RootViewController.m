@@ -13,6 +13,7 @@
 @interface RootViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 @property NSMutableArray *photos;
 @property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
+@property NSMutableArray *favoritedPhotos;
 
 @end
 
@@ -21,13 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photos = [[NSMutableArray alloc] init];
+    self.favoritedPhotos = [[NSMutableArray alloc] init];
     [self getPhotos:@"Chicago"];
 }
-
-- (IBAction)onImageTapped:(id)sender {
-    
-}
-
 
 - (void)getPhotos:(NSString *)urlString
 {
@@ -72,19 +69,23 @@
 
 -(ImageCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"reached the cellForItem...");
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCellID" forIndexPath:indexPath];
     NSInteger indexOfCurrentCollectionCell = [indexPath item];
     PhotoInfo *photoForCell = [[self photos] objectAtIndex:indexOfCurrentCollectionCell];
 
     cell.imageView.image = photoForCell.image;
-    //photoForCell.delegate = self;
     return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.photos.count;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PhotoInfo *selectedPhoto = [self.photos objectAtIndex:indexPath.row];
+    [self.favoritedPhotos addObject:selectedPhoto];
 }
 
 #pragma mark - SearchBar Delegates
@@ -98,5 +99,12 @@
     searchBar.text = @"";
     [searchBar resignFirstResponder];
 }
+
+
+
+
+
+
+
 
 @end
