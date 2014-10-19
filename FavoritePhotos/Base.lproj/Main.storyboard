@@ -72,7 +72,9 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SSW-aT-5Mv" secondAttribute="bottom" id="tlW-Bu-TkR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Photos &amp; Stuff" id="4LJ-CG-mOs"/>
+                    <navigationItem key="navigationItem" title="Photos &amp; Stuff" id="4LJ-CG-mOs">
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="MXM-AI-wRW"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageCollectionView" destination="SSW-aT-5Mv" id="7xB-3L-R8W"/>
                     </connections>
