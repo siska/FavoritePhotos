@@ -75,11 +75,12 @@
                     <navigationItem key="navigationItem" title="Photos &amp; Stuff" id="4LJ-CG-mOs">
                         <barButtonItem key="rightBarButtonItem" title="Favorites" id="MXM-AI-wRW">
                             <connections>
-                                <segue destination="i75-Le-6FV" kind="show" id="Fhn-2P-Nla"/>
+                                <segue destination="i75-Le-6FV" kind="show" identifier="favoritesSegueIdentifier" id="Fhn-2P-Nla"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barButtonFavorites" destination="MXM-AI-wRW" id="oa0-3J-UOG"/>
                         <outlet property="imageCollectionView" destination="SSW-aT-5Mv" id="7xB-3L-R8W"/>
                     </connections>
                 </viewController>

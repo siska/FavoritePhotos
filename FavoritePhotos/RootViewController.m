@@ -15,6 +15,7 @@
 @property NSMutableArray *photos;
 @property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
 @property NSMutableArray *favoritedPhotos;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *barButtonFavorites;
 
 @end
 
@@ -25,6 +26,7 @@
     self.photos = [[NSMutableArray alloc] init];
     self.favoritedPhotos = [[NSMutableArray alloc] init];
     [self getPhotos:@"Chicago"];
+    [self performSegueWithIdentifier:@"favoritesSegueIdentifier" sender:self];
 }
 
 - (void)getPhotos:(NSString *)urlString
@@ -70,9 +72,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    FavoritesCollectionViewController *favoritesViewController = [segue destinationViewController];
-    favoritesViewController.favoritedArray = self.favoritedPhotos;
-    NSLog(@"In Prepare for Segue: %@", favoritesViewController.favoritedArray);
+    if ([segue.identifier  isEqual:@"favoritesSegueIdentifier"])
+    {
+        NSLog(@"Show the UIStoryboardSegue: %@", segue);
+        FavoritesCollectionViewController *favoritesViewController = [segue destinationViewController];
+        favoritesViewController.favoritedArray = self.favoritedPhotos;
+        NSLog(@"In Prepare for Segue: %@", favoritesViewController.favoritedArray);
+    }
 }
 
 #pragma mark - CollectionView Delegates
