@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "PhotoInfo.h"
 #import "ImageCollectionViewCell.h"
+#import "FavoritesCollectionViewController.h"
 
 @interface RootViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 @property NSMutableArray *photos;
@@ -63,6 +64,14 @@
         NSLog(@"Connection Error: %@", connectionError);
         NSLog(@"JSON Error: %@", jsonError);
     }];
+}
+
+#pragma mark - Prepare For Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    FavoritesCollectionViewController *favoritesViewController = [segue destinationViewController];
+    favoritesViewController.favoritedArray = self.favoritedPhotos;
 }
 
 #pragma mark - CollectionView Delegates
